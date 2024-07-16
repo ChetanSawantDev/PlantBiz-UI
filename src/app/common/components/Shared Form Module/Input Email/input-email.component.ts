@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-email.component.html',
   styleUrl: './input-email.component.scss'
 })
-export class InputEmailComponent {
+export class GLInputEmailComponent {
 
 }

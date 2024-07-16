@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-number.component.html',
   styleUrl: './input-number.component.scss'
 })
-export class InputNumberComponent {
+export class GLInputNumberComponent {
 
 }

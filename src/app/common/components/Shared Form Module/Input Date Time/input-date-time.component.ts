@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-date-time.component.html',
   styleUrl: './input-date-time.component.scss'
 })
-export class InputDateTimeComponent {
+export class GLInputDateTimeComponent {
 
 }

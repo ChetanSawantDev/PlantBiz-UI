@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-radio-buttons.component.html',
   styleUrl: './input-radio-buttons.component.scss'
 })
-export class InputRadioButtonsComponent {
+export class GLInputRadioButtonsComponent {
 
 }

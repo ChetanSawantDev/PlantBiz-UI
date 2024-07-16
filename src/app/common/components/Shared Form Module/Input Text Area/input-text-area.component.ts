@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-text-area.component.html',
   styleUrl: './input-text-area.component.scss'
 })
-export class InputTextAreaComponent {
+export class GLInputTextAreaComponent {
 
 }

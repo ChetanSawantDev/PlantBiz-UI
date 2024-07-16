@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-date-range.component.html',
   styleUrl: './input-date-range.component.scss'
 })
-export class InputDateRangeComponent {
+export class GLInputDateRangeComponent {
 
 }

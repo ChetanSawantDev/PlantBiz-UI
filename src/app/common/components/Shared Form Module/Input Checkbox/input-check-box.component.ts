@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './input-check-box.component.html',
   styleUrl: './input-check-box.component.scss'
 })
-export class InputCheckBoxComponent {
+export class GLInputCheckBoxComponent {
 
 }
