@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnChanges} from '@angular/core';
-import { WordCaseConstants } from '../../Data List/ConstantsLabels';
+import { WordCaseConstants } from '../../../Utils/ConstantsLabels';
 
 @Component({
   selector: 'app-gl-input-text',
