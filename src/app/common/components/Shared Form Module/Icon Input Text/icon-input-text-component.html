@@ -1,0 +1,12 @@
+<p-inputGroup [ngStyle]="{'width': width,'margin':margin}">
+    <p-inputGroupAddon class="input_group_addon">
+        <i class="pi pi-user"></i>
+    </p-inputGroupAddon>
+    <input pInputText placeholder="{{placeholder}}" 
+                      [required]="isRequired" 
+                      [disabled]="isDisabled"
+                      (blur)="onValueChange()"
+                      [ngClass]="{'FM_input-invalid': isTouched && isInvalid}"
+                      [(ngModel)]="setValue"
+                      (input)="onValueChange()"/>
+</p-inputGroup>

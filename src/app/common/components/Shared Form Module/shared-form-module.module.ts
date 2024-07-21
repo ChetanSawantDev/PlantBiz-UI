@@ -11,10 +11,14 @@ import { GLInputDateTimeComponent } from './Input Date Time/input-date-time.comp
 import { GLInputTextAreaComponent } from './Input Text Area/input-text-area.component';
 import { GLInputCheckBoxComponent } from './Input Checkbox/input-check-box.component';
 import { GLInputRadioButtonsComponent } from './Input Radio Buttons/input-radio-buttons.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GLIconInputTextComponent } from './Icon Input Text/icon-input-text.component';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { CheckboxModule } from 'primeng/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -28,15 +32,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GLInputDateTimeComponent,
     GLInputTextAreaComponent,
     GLInputCheckBoxComponent,
-    GLInputRadioButtonsComponent
+    GLInputRadioButtonsComponent,
+    GLIconInputTextComponent
   ],
+
   imports: [
     CommonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    ReactiveFormsModule,
+    InputGroupModule,
+    InputGroupAddonModule,
+    InputTextModule,
     FormsModule,
+    ReactiveFormsModule,
+    FloatLabelModule,
+    CheckboxModule
   ],
   exports:[
     GLInputTextComponent,
@@ -49,7 +57,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GLInputDateTimeComponent,
     GLInputTextAreaComponent,
     GLInputCheckBoxComponent,
-    GLInputRadioButtonsComponent
+    GLInputRadioButtonsComponent,
+    GLIconInputTextComponent
   ],
   
 })

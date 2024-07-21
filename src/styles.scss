@@ -1,4 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "app/common/scss/formModule.scss";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #3f4948; }
+
+
+
+$cyan-color : #00dddd;
+
+/* Remove default border and box-shadow for p-inputtext */
+.p-inputtext {
+    border: none !important; /* Removes the default border */
+    box-shadow: none !important; /* Removes the default box-shadow */
+    background-color: black; /* Custom background color */
+    color: white; /* Custom text color */
+}
+
+/* Remove border and box-shadow on focus */
+.p-inputtext:focus {
+    outline: 0.1em solid #00dddd !important; /* Remove default focus outline */
+    box-shadow: none !important; /* Custom box-shadow on focus */
+}
+
+/* Ensure placeholder text color is visible */
+.p-inputtext::placeholder {
+    color: white !important;
+}
+
+/* Customize icon color */
+.pi-user {
+    color: #00dddd !important; /* Customize the icon color */
+}
+
+
+
+label:hover{
+    cursor: pointer;
+}

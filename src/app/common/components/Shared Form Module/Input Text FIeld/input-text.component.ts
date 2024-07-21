@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnChanges} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnChanges, SimpleChanges} from '@angular/core';
 import { WordCaseConstants } from '../../../Utils/ConstantsLabels';
+import { TextFormatUtils as textFormat} from '../../../Utils/Formatting/TextFormat';
 
 @Component({
   selector: 'app-gl-input-text',
@@ -8,44 +9,62 @@ import { WordCaseConstants } from '../../../Utils/ConstantsLabels';
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class GLInputTextComponent{
-  //Styles Props
+  
   @Input({required:true}) public label !: string;
   @Input() public width = '250px';
-  @Input() public height = '70px';
-  @Input() public wordCase : "UPPER" | "LOWER" | "CAMELCASE" | "NORMAL" = "NORMAL";
+  @Input() public height = 'auto';
+  @Input() public wordCase : "UPPER" | "LOWER" | "CAMELCASE" | "NORMAL" |"PASCAL" | "KEBAB" | "CAMEL" | "SNAKE"= "NORMAL";
   @Input() appearance:'fill' | 'outline' = 'fill' ;
-  @Input() public maxLength : number = 100;
-  @Input() public isRequired : boolean = false; 
-  @Input() public placeholder : string = this.label; 
-  @Input() public isDisabled : boolean = false; 
-  @Input() public setValue : string = "";
+  @Input() public maxLength = 100;
+  @Input() public isRequired = true; 
+  @Input() public placeholder = this.label; 
+  @Input() public isDisabled = false; 
+  @Input() public setValue = "";
 
 
   @Output() public getValue : EventEmitter<string> = new EventEmitter<string>();
+  public isTouched = false;
+  public isInvalid = false;
 
-  onValueChange(){
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['setValue']) {
+      if(this.isRequired){
+        this.checkValidation();
+      }
+    }
+  }
+
+  onValueChange() {
+    this.transformData();
+    this.getValue.emit(this.setValue);
+    if(this.isRequired){
+      this.checkValidation();
+    }
+  }
+
+  transformData(){
     if(this.wordCase === WordCaseConstants.UPPER_CASE){
       this.setValue = this.setValue.toLocaleUpperCase();
     }
-
     if(this.wordCase === WordCaseConstants.LOWER_CASE){
-
+      this.setValue = textFormat.toLowerCase(this.setValue);
     }
     if(this.wordCase === WordCaseConstants.CAMEL_CASE){
-
+      this.setValue = textFormat.toCamelCase(this.setValue);
     }
     if(this.wordCase === WordCaseConstants.KEBAB_CASE){
-
+      this.setValue = textFormat.toKebabCase(this.setValue);
     }
     if(this.wordCase === WordCaseConstants.PASCAL_CASE){
-
+      this.setValue = textFormat.toSnakeCase(this.setValue);
     }
     if(this.wordCase === WordCaseConstants.SNAKE_CASE){
-
+      this.setValue = textFormat.toSnakeCase(this.setValue);
     }
-
-    this.getValue.emit(this.setValue);
-    console.log(this.setValue);
   }
 
+  checkValidation() {
+    this.isTouched = true;
+    this.isInvalid = this.setValue!== '' ? false : true;
+  }
 }

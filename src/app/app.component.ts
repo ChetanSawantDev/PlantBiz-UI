@@ -11,4 +11,5 @@ import { SharedFormModule } from './common/components/Shared Form Module/shared-
 })
 export class AppComponent {
   title = 'PlantBiz_MIS';
+  inputValue :boolean = false;
 }

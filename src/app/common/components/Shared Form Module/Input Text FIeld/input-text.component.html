@@ -1,10 +1,14 @@
-<mat-form-field [appearance]="appearance" >
-  <mat-label>{{label}}</mat-label>
-  <input matInput [type]="'text'" 
-                  [maxLength]="maxLength" 
-                  [required]="isRequired"
-                  [placeholder]="placeholder"
-                  [disabled]="isDisabled"
-                  [(ngModel)] = "setValue"
-                  (ngModelChange)="onValueChange()" />
-</mat-form-field>
+
+<p-floatLabel>
+    <input 
+    pInputText 
+    [(ngModel)]="setValue" 
+    placeholder="{{placeholder}}" 
+    [required]="isRequired" 
+    [disabled]="isDisabled"
+    (blur)="onValueChange()"
+    [ngClass]="{'FM_input-invalid': isTouched && isInvalid}"
+    [(ngModel)]="setValue"
+    (input)="onValueChange()"/>
+    <label for="username">Username</label>
+</p-floatLabel>

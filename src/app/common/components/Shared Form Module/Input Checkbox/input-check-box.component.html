@@ -1,1 +1,7 @@
-<p>input-check-box works!</p>
+<p-checkbox 
+    [(ngModel)]="setValue" 
+    [binary]="true" 
+    inputId="ny"
+    (onChange)="onValueChange()" 
+/>
+<label for="ny" style="padding: 0em 1em;">{{fieldLabel}}</label>
