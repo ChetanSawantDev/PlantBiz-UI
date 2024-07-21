@@ -1,4 +1,10 @@
-<mat-form-field appearance="fill" >
+<mat-form-field [appearance]="appearance" >
   <mat-label>{{label}}</mat-label>
-  <input matInput />
+  <input matInput [type]="'text'" 
+                  [maxLength]="maxLength" 
+                  [required]="isRequired"
+                  [placeholder]="placeholder"
+                  [disabled]="isDisabled"
+                  [(ngModel)] = "setValue"
+                  (ngModelChange)="onValueChange()" />
 </mat-form-field>
