@@ -1,0 +1,13 @@
+<div class="p-field">
+    <span class="p-float-label">
+        <p-calendar 
+            [(ngModel)]="setDate" 
+            [showIcon]="true" 
+            [showOnFocus]="false" 
+            (ngModelChange)="onDateChange()"
+            [style.width]="width"
+            [style.display]="'flex'"
+            inputId="buttondisplay" dateFormat="dd/mm/yy"/>
+        <label>{{ label }}</label>
+    </span>
+</div>

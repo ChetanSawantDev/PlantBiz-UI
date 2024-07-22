@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GLIconInputTextComponent } from './Icon Input Text/icon-input-text.component';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { CheckboxModule } from 'primeng/checkbox';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {CalendarModule} from 'primeng/calendar';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { CheckboxModule } from 'primeng/checkbox';
     FormsModule,
     ReactiveFormsModule,
     FloatLabelModule,
-    CheckboxModule
+    CheckboxModule,
+    AutoCompleteModule,
+    CalendarModule
   ],
   exports:[
     GLInputTextComponent,

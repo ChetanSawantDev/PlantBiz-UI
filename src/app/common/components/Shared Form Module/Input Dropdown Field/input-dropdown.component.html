@@ -1,0 +1,14 @@
+<div class="p-field">
+    <span class="p-float-label">
+      <p-autoComplete 
+        [suggestions]="filteredOptions" 
+        (completeMethod)="filterOptions($event)" 
+        [(ngModel)]="selectedOption" 
+        field="label" 
+        [dropdown]="true"  
+        [forceSelection]="true"
+        (onSelect)="onOptionSelect($event)">
+      </p-autoComplete>
+      <label>{{ placeholder }}</label>
+    </span>
+  </div>

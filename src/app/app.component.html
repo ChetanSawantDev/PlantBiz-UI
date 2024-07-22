@@ -1,8 +1,9 @@
 <br>
 <br>
+<app-input-date [label]="'Birth Date'" (getDate)="selecteDate = $event"></app-input-date>
 
-<app-input-check-box [fieldLabel]="'Active'"></app-input-check-box>
 <br>
+<h1>{{selecteDate}}</h1>
 <br>
 <app-gl-input-text [label]="'First Name'"></app-gl-input-text>
 <h1>{{inputValue}}</h1>
