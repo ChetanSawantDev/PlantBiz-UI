@@ -10,6 +10,8 @@ export class GLInputDateComponent {
   @Input() isRequired:boolean=false;
   @Input() isDisabled= false;
   @Input() width:string='180px';
+  @Input() minDate?:Date;
+  @Input() maxDate?:Date;
   @Input({required:true}) label:string = "";
   @Output() getDate:EventEmitter<string> = new EventEmitter<string>();
 

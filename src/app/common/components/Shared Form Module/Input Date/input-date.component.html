@@ -5,6 +5,8 @@
             [showIcon]="true" 
             [showOnFocus]="false" 
             (ngModelChange)="onDateChange()"
+            [minDate]="minDate" 
+            [maxDate]="maxDate"
             [style.width]="width"
             [style.display]="'flex'"
             inputId="buttondisplay" dateFormat="dd/mm/yy"/>
