@@ -1,1 +1,11 @@
-<p>input-radio-buttons works!</p>
+<div class="flex align-items-center">
+    <p-radioButton 
+        name="fieldName" 
+        value="value" 
+        [(ngModel)]="getValue"
+        (ngModelChange)="onValueChange()" 
+        inputId="inputId" />
+    <label for="inputId" class="ml-2">
+        {{label}}
+    </label>
+</div>

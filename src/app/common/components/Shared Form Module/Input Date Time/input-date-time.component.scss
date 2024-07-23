@@ -1,0 +1,20 @@
+
+:host ::ng-deep p-calendar {
+    button{
+        background-color: #35A29F !important;
+        border: none !important;
+        color: white;
+    }
+}
+
+    :host ::ng-deep p-calendar {
+        .p-datepicker,.p-datepicker-header{
+            background-color: black;
+        }
+    }
+
+    .p-datepicker table td.p-datepicker-today > span {
+        background: #B4B4B8 !important;
+        color: #3C3633 !important;
+        border-color: transparent;
+    }

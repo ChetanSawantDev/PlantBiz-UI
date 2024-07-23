@@ -20,7 +20,9 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { CheckboxModule } from 'primeng/checkbox';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {CalendarModule} from 'primeng/calendar';
-
+import { InputIconModule } from 'primeng/inputicon';
+import { IconFieldModule } from 'primeng/iconfield';
+import {RadioButtonModule} from 'primeng/radiobutton'
 
 @NgModule({
   declarations: [
@@ -48,7 +50,10 @@ import {CalendarModule} from 'primeng/calendar';
     FloatLabelModule,
     CheckboxModule,
     AutoCompleteModule,
-    CalendarModule
+    CalendarModule,
+    InputIconModule,
+    IconFieldModule,
+    RadioButtonModule
   ],
   exports:[
     GLInputTextComponent,

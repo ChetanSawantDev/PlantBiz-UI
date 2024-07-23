@@ -24,7 +24,7 @@ export class AppComponent {
   selectedCity: City | null = null;
   
 
-  selecteDate = "";
+  selecteDate :string= '';
 
   constructor() {
     this.cities = [

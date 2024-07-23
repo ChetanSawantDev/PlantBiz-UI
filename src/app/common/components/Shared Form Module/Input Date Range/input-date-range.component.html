@@ -1,1 +1,12 @@
-<p>input-date-range works!</p>
+<div class="p-field">
+    <span class="p-float-label">
+        <p-calendar [(ngModel)]="setDateRange" 
+                    selectionMode="range" 
+                    dateFormat="dd/mm/yy"
+                    (ngModelChange)="onDateChange();" 
+                    [showIcon]="true"
+                    [icon]="'pi pi-calendar-plus'">
+        </p-calendar>
+        <label>{{ label }}</label>
+    </span>
+</div>

@@ -1,1 +1,4 @@
-<p>input-email works!</p>
+<p-iconField iconPosition="left">
+    <p-inputIcon styleClass="pi pi-at" />
+    <input type="email" pInputText placeholder="Enter Email" (input)="onValueChange()" [(ngModel)]="setValue" />
+</p-iconField>

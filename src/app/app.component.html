@@ -1,7 +1,15 @@
 <br>
 <br>
-<app-input-date [label]="'Birth Date'" (getDate)="selecteDate = $event"></app-input-date>
 
+<app-input-radio-buttons [fieldName]="'fruit'" label="'Apple'" [inputId]="'12345'" (getValue)="selecteDate = $event"></app-input-radio-buttons>
+<br>
+<app-input-radio-buttons [fieldName]="'fruit'" label="'Orange'" [inputId]="'123456'" (getValue)="selecteDate = $event"></app-input-radio-buttons>
+<br>
+<app-input-radio-buttons [fieldName]="'fruit'" label="'PineApple'" [inputId]="'123457'" (getValue)="selecteDate = $event"></app-input-radio-buttons>
+<br>
+<app-input-radio-buttons [fieldName]="'fruit'" label="'Banan'" [inputId]="'123458'" (getValue)="selecteDate = $event"></app-input-radio-buttons>
+<br>
+<app-input-radio-buttons [fieldName]="'fruit'" label="'Grapes'" [inputId]="'123459'" (getValue)="selecteDate = $event"></app-input-radio-buttons>
 <br>
 <h1>{{selecteDate}}</h1>
 <br>
