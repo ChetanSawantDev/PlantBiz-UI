@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges} from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
 import { WordCaseConstants } from '../../../Utils/ConstantsLabels';
 import { TextFormatUtils as textFormat} from '../../../Utils/Formatting/TextFormat';
 

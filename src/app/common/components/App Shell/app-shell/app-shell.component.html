@@ -1,0 +1,8 @@
+<div class="app-container">
+    <app-app-bar (openCloseSideNav)="sideBarVisible = $event" [isSideNavOpen]="sideBarVisible"></app-app-bar>
+    <app-plbreadcrumb></app-plbreadcrumb>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+        <app-side-nav-bar [sideBarVisible]="sideBarVisible" (setSideBarVisibility)="sideBarVisible = $event" ></app-side-nav-bar>
+    </div>
+</div>

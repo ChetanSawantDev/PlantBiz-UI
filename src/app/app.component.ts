@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedFormModule } from './common/components/Shared Form Module/shared-form-module.module';
 import { DropDownItem } from './common/model/SharedFormModule';
+import { AppShellModule } from './common/components/App Shell/app-shell.module';
 
 class City extends DropDownItem{
   constructor(label:string, value:any, rowObjData:Object){
@@ -12,7 +13,7 @@ class City extends DropDownItem{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SharedFormModule],
+  imports: [RouterOutlet, SharedFormModule,AppShellModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

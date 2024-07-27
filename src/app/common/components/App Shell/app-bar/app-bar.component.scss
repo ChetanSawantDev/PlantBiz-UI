@@ -1,0 +1,28 @@
+.side-nav-icon{
+    box-shadow: none; /* Remove the box shadow */
+}
+
+
+       
+p-inputGroup{
+    height: 34px !important;
+}
+
+input:focus{
+    box-shadow: none !important;
+    border: 1px #fefefe solid !important;
+}
+
+:host ::ng-deep p-calendar {
+    
+    .p-inputtext:focus {
+        outline: 0.1em solid #00dddd !important; /* Remove default focus outline */
+        box-shadow: none !important; /* Custom box-shadow on focus */
+    }
+}
+
+
+.app-shell-app-bar{
+    position: relative;
+ z-index: 1500;   
+}
