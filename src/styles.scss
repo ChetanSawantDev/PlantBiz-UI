@@ -94,6 +94,19 @@ label:hover{
     cursor: pointer;
 }
 
+.cdk-overlay-container{
+  z-index: 1550 !important;
+}
+
+.cdk-overlay-connected-position-bounding-box{
+  top: 60px !important;
+  left: 1357.28px !important;
+}
+
+app-user-activity{
+  width: 100%;
+}
+
 /* In styles.scss */
 @font-face {
     font-family: 'Source Sans 3';

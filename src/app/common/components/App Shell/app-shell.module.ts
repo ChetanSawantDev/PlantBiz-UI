@@ -12,7 +12,11 @@ import { CardModule } from 'primeng/card';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { RouterOutlet } from '@angular/router';
 import { PLBreadcrumbComponent } from "./Breadcrumb/plbreadcrumb.component";
-
+import { MatSelectModule } from '@angular/material/select';
+import { RouterLink } from '@angular/router';
+import { MenuModule } from 'primeng/menu';
+import { DropdownModule } from 'primeng/dropdown';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [AppBarComponent,AppShellComponent, SideNavBarComponent],
   imports: [
@@ -25,7 +29,12 @@ import { PLBreadcrumbComponent } from "./Breadcrumb/plbreadcrumb.component";
     CardModule,
     BreadcrumbModule,
     PLBreadcrumbComponent,
-    RouterOutlet
+    RouterOutlet,
+    MatSelectModule,
+    RouterLink,
+    MenuModule,
+    DropdownModule,
+    MatMenuModule
 ],
   exports:[
     AppBarComponent,AppShellComponent, SideNavBarComponent

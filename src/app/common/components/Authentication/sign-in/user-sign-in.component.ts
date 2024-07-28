@@ -7,11 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { SharedFormModule } from "../../Shared Form Module/shared-form-module.module";
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-user-sign-in',
   standalone: true,
-  imports: [MenuBarComponent, CarouselModule, TagModule, InputTextModule, FormsModule, SharedFormModule,MatButtonModule, MatIconModule],
+  imports: [MenuBarComponent, CarouselModule, TagModule, InputTextModule, FormsModule, SharedFormModule,MatButtonModule, MatIconModule,MatDividerModule],
   templateUrl: './user-sign-in.component.html',
   styleUrl: './user-sign-in.component.scss'
 })

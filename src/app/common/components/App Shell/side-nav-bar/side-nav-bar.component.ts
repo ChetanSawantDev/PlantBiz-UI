@@ -9,16 +9,16 @@ import { ModuleLinksDet } from '../../../model/ModuleLinksDet';
 export class SideNavBarComponent {
   
  moduleLinkData:ModuleLinksDet[] = [
-  {MLD_title:"Admin Module", MLD_faIcon:"fa-solid fa-user-tie", MLD_description:"Manage system settings, user roles, and permissions.",MLD_faIconSecondary:"fa-solid fa-gear"},
-  {MLD_title:"HR Module", MLD_faIcon:"fa-solid fa-users", MLD_description:"Handle employee records, recruitment, and HR policies."},
-  {MLD_title:"Finance Module", MLD_faIcon:"fa-solid fa-coins", MLD_description:"Track financial transactions, budgeting, and reporting."},
-  {MLD_title:"Inventory Module", MLD_faIcon:"fa-solid fa-warehouse", MLD_description:"Track stock levels, manage warehouse operations, and inventory control."},
-  {MLD_title:"Production Module", MLD_faIcon:"fa-solid fa-industry", MLD_description:"Oversee production processes, scheduling, and manufacturing."},
-  {MLD_title:"Quality Module", MLD_faIcon:"fa-solid fa-check-circle", MLD_description:"Ensure product quality standards and manage quality control."},
-  {MLD_title:"Sales Module", MLD_faIcon:"fa-solid fa-shopping-bag", MLD_description:"Handle sales processes, order management, and customer interactions."},
-  {MLD_title:"CRM Module", MLD_faIcon:"fa-solid fa-handshake", MLD_description:"Manage customer relationships, support, and engagement."},
-  {MLD_title:"Retailers Module", MLD_faIcon:"fa-solid fa-store", MLD_description:"Manage retailer accounts, sales channels, and retail operations."},
-  {MLD_title:"Logistics/Shipping Module", MLD_faIcon:"fa-solid fa-truck-moving", MLD_description:"Manage shipping, distribution, and logistics operations."},
+  {MLD_title:"Admin Module", MLD_faIcon:"fa-solid fa-user-tie", MLD_description:"Manage system settings, user roles, and permissions.",MLD_faIconSecondary:"fa-solid fa-gear", MLD_href:"admin"},
+  {MLD_title:"HR Module", MLD_faIcon:"fa-solid fa-users", MLD_description:"Handle employee records, recruitment, and HR policies.", MLD_href:"hr"},
+  {MLD_title:"Finance Module", MLD_faIcon:"fa-solid fa-coins", MLD_description:"Track financial transactions, budgeting, and reporting.", MLD_href:"finance"},
+  {MLD_title:"Inventory Module", MLD_faIcon:"fa-solid fa-warehouse", MLD_description:"Track stock levels, manage warehouse operations, and inventory control.", MLD_href:"inventory"},
+  {MLD_title:"Production Module", MLD_faIcon:"fa-solid fa-industry", MLD_description:"Oversee production processes, scheduling, and manufacturing.", MLD_href:"production"},
+  {MLD_title:"Quality Module", MLD_faIcon:"fa-solid fa-check-circle", MLD_description:"Ensure product quality standards and manage quality control.", MLD_href:"quality"},
+  {MLD_title:"Sales Module", MLD_faIcon:"fa-solid fa-shopping-bag", MLD_description:"Handle sales processes, order management, and customer interactions.", MLD_href:"sales"},
+  {MLD_title:"CRM Module", MLD_faIcon:"fa-solid fa-handshake", MLD_description:"Manage customer relationships, support, and engagement.", MLD_href:"crm"},
+  {MLD_title:"Retailers Module", MLD_faIcon:"fa-solid fa-store", MLD_description:"Manage retailer accounts, sales channels, and retail operations.", MLD_href:"retailers"},
+  {MLD_title:"Logistics/Shipping Module", MLD_faIcon:"fa-solid fa-truck-moving", MLD_description:"Manage shipping, distribution, and logistics operations.", MLD_href:"logistics"},
 ];
 
   @Input({required:true}) sideBarVisible!:boolean;

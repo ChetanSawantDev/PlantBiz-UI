@@ -1,28 +1,90 @@
-.side-nav-icon{
-    box-shadow: none; /* Remove the box shadow */
+.side-nav-icon {
+  box-shadow: none; /* Remove the box shadow */
 }
 
-
-       
-p-inputGroup{
-    height: 34px !important;
+p-inputGroup {
+  height: 34px !important;
 }
 
-input:focus{
-    box-shadow: none !important;
-    border: 1px #fefefe solid !important;
+input:focus {
+  box-shadow: none !important;
+  border: 1px #fefefe solid !important;
 }
 
 :host ::ng-deep p-calendar {
-    
-    .p-inputtext:focus {
-        outline: 0.1em solid #00dddd !important; /* Remove default focus outline */
-        box-shadow: none !important; /* Custom box-shadow on focus */
-    }
+  .p-inputtext:focus {
+    outline: 0.1em solid #00dddd !important; /* Remove default focus outline */
+    box-shadow: none !important; /* Custom box-shadow on focus */
+  }
 }
 
+.app-shell-app-bar {
+  position: relative;
+  z-index: 1500;
+}
 
-.app-shell-app-bar{
-    position: relative;
- z-index: 1500;   
+//user menu scss
+
+/* dropdown-links.component.css */
+.user-menu-cont{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.user-manu-label{
+  padding: 0 0 0 0.6em;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.user-menu{
+  padding: 0em 1em;
+}
+
+.user-menu-link{
+  padding: 0.4em 1.5em;
+}
+
+.user-menu-droplinks{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  padding: 0em 0em 0em 1em;
+}
+
+.fa-caret-down{
+    color: #DEAC80; 
+    font-size: 1.5em;
+    padding: 0.2em 0.4em 0em 0.4em;
+    cursor: pointer;
+}
+
+.mat-mdc-menu-item{
+  min-height: 20px !important;
+}
+
+.user-menu-img{
+  width: 2.2em;
+}
+
+.user-menu-img img{
+  border-radius: 50%;
+}
+
+p{
+  font-family: "Montserrat";
+  color: #DEAC80 !important;
+  font-weight: 500;
+}
+
+.user-name{
+  font-size: 0.9em;
+  line-height: 1em;
+  padding-top: 0.4em;
+}
+
+.user-desg{
+  font-size: 0.65em;
+  line-height: 1em;
 }

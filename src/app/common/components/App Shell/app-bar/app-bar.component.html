@@ -4,12 +4,8 @@
     <p-button
       pRipple
       class="bg-black text-white side-nav-icon"
-      (onClick)="openSideNavBar()"
-    >
-      <i
-        class="pi {{ isSideNavOpen ? 'pi-times' : 'pi-bars' }}"
-        style="font-size: 2rem"
-      ></i>
+      (onClick)="openSideNavBar()">
+      <i class="pi {{ isSideNavOpen ? 'pi-times' : 'pi-bars' }}" style="font-size: 2rem" ></i>
     </p-button>
   </div>
   <div class="w-2/5">
@@ -23,5 +19,25 @@
         class="appearance-none border-none outline-none focus:outline-none focus:ring-0 bg-white p-2 w-full"
       />
     </p-inputGroup>
+  </div>
+  <div class="w-2/5 user-menu-cont" (click)="dropDownMenu();">
+    <div class="flex">
+      <button class="user-menu-droplinks" mat-icon-button [matMenuTriggerFor]="menu">
+        <div class="user-menu-img">
+          <img src="assets/images/common/app-bar/profile.png" alt="not-found" />
+        </div>
+        <div class="user-menu">
+          <p class="user-name">Gene Russell</p>
+          <p class="user-desg">Developer</p>
+        </div>
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </div>
+    <mat-menu #menu="matMenu" class="mat-menu-cust">
+      <a class="user-menu-link" mat-menu-item *ngFor="let link of links" (click)="navigateToUser(link.tabName);">
+        <i class="{{link.icon}}"></i>
+        <span class="user-manu-label">{{link.label}}</span>
+      </a>
+    </mat-menu>
   </div>
 </div>
