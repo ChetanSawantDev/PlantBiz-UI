@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { UserSignInComponent } from './common/components/Home/sign-in/user-sign-in.component';
+import { UserSignInComponent } from './common/components/Authentication/sign-in/user-sign-in.component';
 import { AppShellComponent } from './common/components/App Shell/app-shell/app-shell.component';
 import { authGuard, authGuardForChild } from './common/Guards/auth.guard';
 import { PLGAdminComponent } from './modules/Admin/components/Admin Home/pl-gadmin.component';
@@ -12,7 +12,7 @@ import { PLGProductionComponent } from './modules/Production/components/Producti
 import { PLGQualtiyControlComponent } from './modules/Quality Control/components/Quality Control/plgqualtiy-control.component';
 import { PLGRetailersComponent } from './modules/Retailers Management/components/Retailers Home/plgretailers.component';
 import { PLGSalesComponent } from './modules/Sales/components/Sales Home/plgsales.component';
-import { NotFoundComponent } from './common/components/Home/not-found/not-found.component';
+import { NotFoundComponent } from './common/components/Authentication/not-found/not-found.component';
 
 export const routes: Routes = [
     {   path:"", 
@@ -29,9 +29,9 @@ export const routes: Routes = [
                 {path:"production", component:PLGProductionComponent},
                 {path:"quality", component:PLGQualtiyControlComponent},
                 {path:"retailers", component:PLGRetailersComponent},
-                {path:"sales", component:PLGSalesComponent},
+                {path:"sales", component:PLGSalesComponent}
             ]
     },
     {path:"login",component:UserSignInComponent},
-    {path:"**", component:NotFoundComponent}
+    { path: '**', component:NotFoundComponent }
 ];

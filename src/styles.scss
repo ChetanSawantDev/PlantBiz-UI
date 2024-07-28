@@ -1,8 +1,46 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
 @use "app/common/scss/commonModules.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$PlantBiz_MIS-primary: mat.define-palette(mat.$indigo-palette);
+$PlantBiz_MIS-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$PlantBiz_MIS-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$PlantBiz_MIS-theme: mat.define-light-theme((
+  color: (
+    primary: $PlantBiz_MIS-primary,
+    accent: $PlantBiz_MIS-accent,
+    warn: $PlantBiz_MIS-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($PlantBiz_MIS-theme);
+
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "app/common/scss/formModule.scss";
 @import '@fortawesome/fontawesome-free/css/all.css';
+
 
 
 @tailwind base;
@@ -56,3 +94,41 @@ label:hover{
     cursor: pointer;
 }
 
+/* In styles.scss */
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('/assets/fonts/Source_Sans_3/static/SourceSans3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('/assets/fonts/Open_Sans/static/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/Nunito/static/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts//Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
