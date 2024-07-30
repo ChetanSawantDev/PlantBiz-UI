@@ -1,0 +1,41 @@
+.user-chat-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.user-chat-search input{
+    width: 100%;
+    padding: 0.5em 0.8em 0.5em 2.8em;;
+    background-color: #3F3351;
+    border-radius: 1.4em;
+    color: #F58840;
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 0.8em;
+    position: relative;
+}
+.user-chat-search i{
+    position: absolute;
+    left: calc(3% - 10px);
+    color: #919eb1;
+    z-index: 1;
+    font-size: 0.8em;
+}
+
+
+
+.user-chat-settings{
+    padding: 0.6em 0.4em 0.6em 0em;
+    display: flex;
+    flex-direction: row-reverse;
+}
+i{
+    color: #6D67E4;
+}
+.user-chat-settings button{
+    padding: 0em 0.4em;
+    cursor: pointer;
+}
