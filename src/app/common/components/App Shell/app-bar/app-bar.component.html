@@ -34,10 +34,12 @@
       </button>
     </div>
     <mat-menu #menu="matMenu" class="mat-menu-cust">
-      <a class="user-menu-link" mat-menu-item *ngFor="let link of links" (click)="navigateToUser(link.tabName);">
-        <i class="{{link.icon}}"></i>
-        <span class="user-manu-label">{{link.label}}</span>
-      </a>
+      <ng-container *ngFor="let link of links">
+        <a routerLink="/user" [queryParams]="{ tabName: link.label }" class="user-menu-link" mat-menu-item>
+          <i class="{{link.icon}}"></i>
+          <span class="user-manu-label">{{link.label}}</span>
+        </a>
+      </ng-container>
     </mat-menu>
   </div>
 </div>

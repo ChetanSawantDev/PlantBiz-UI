@@ -4,6 +4,7 @@
 
 @use "app/common/scss/commonModules.scss";
 @use "app/common/scss/material-tabs.scss";
+@use "app/common/scss/tags_css.scss";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -101,12 +102,18 @@ label:hover{
 
 .cdk-overlay-connected-position-bounding-box{
   top: 60px !important;
-  left: 1357.28px !important;
+  left: 87% !important;
 }
 
 app-user-activity{
   width: 100%;
 }
+
+.component-container{
+  display: flex;
+  flex: 1;
+}
+
 
 /* In styles.scss */
 @font-face {

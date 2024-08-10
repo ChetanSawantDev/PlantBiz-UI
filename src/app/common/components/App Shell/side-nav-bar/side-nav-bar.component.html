@@ -5,7 +5,7 @@
   [dismissible]="false">
   <div class="app-sidebar-container">
     <div class="app-sidebar-module-card" *ngFor="let moduleDet of moduleLinkData">
-        <a href="{{moduleDet.MLD_href}}">
+        <a routerLink="{{moduleDet.MLD_href}}">
             <p-card>
                 <div class="titleWithIcon">
                     <i class="{{moduleDet.MLD_faIcon}}"></i>

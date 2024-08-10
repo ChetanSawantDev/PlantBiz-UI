@@ -13,50 +13,43 @@ import { filter } from 'rxjs';
   templateUrl: './user-activity.component.html',
   styleUrl: './user-activity.component.scss'
 })
-export class PLGUserActivityComponent implements OnInit,OnChanges{
+export class PLGUserActivityComponent implements OnInit{
   selectedIndex: number = 0;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
   ngOnInit(): void {
     this.getTabNameFromRoutes();
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    this.getTabNameFromRoutes();
-  }
+
   
   getTabNameFromRoutes(){
-    const navigation = this.router.getCurrentNavigation();
-    const state = navigation?.extras.state as { tab: string };
-    console.warn(state + "This is state");
-    if (state) {
-      this.setTabIndex(state.tab);
-    }
-    console.warn(state.tab+ "FROM NAVIGATIOn");
-    this.route.params.subscribe(params => {
-      const tab = params['tab'];
-      if (!state) {
-        this.setTabIndex(tab);
+    let l_tabName ='';
+    this.route.queryParams.subscribe((params) => {
+      l_tabName = params['tabName'];
+      if (l_tabName) {
+        this.setTabIndex(l_tabName);
       }
     });
 
   }
 
-
   setTabIndex(tab: string): void {
+    console.warn('Set Tab Index ' + tab);
     switch (tab) {
-      case 'profile':
+      case 'Profile':
         this.selectedIndex = 0;
         break;
-      case 'messages':
+      case 'Inbox':
         this.selectedIndex = 1;
         break;
-      case 'settings':
+      case 'Settings':
         this.selectedIndex = 2;
         break;
       default:
         this.selectedIndex = 0;
         break;
     }
+    console.warn('Selected Index' + this.selectedIndex);
   }
 
   onTabChange(event: any): void {

@@ -34,7 +34,8 @@ import { MatMenuModule } from '@angular/material/menu';
     RouterLink,
     MenuModule,
     DropdownModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterLink
 ],
   exports:[
     AppBarComponent,AppShellComponent, SideNavBarComponent
